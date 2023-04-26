@@ -1,5 +1,7 @@
 name: Docker
-on: push
+on:
+  workflow_dispatch:
+  push:
 jobs:
   docker:
     name: GitHub Packages
