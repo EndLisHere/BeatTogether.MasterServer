@@ -6,7 +6,7 @@ COPY . ./
 RUN dotnet restore
 
 # Build the project
-RUN dotnet publish BeatTogether.MasterServer -c Release -p:PublishReadyToRun=true -r linux-x64 -o out
+RUN dotnet publish BeatTogether.MasterServer -c Release -p:PublishReadyToRun=true -r linux-arm64 -o out
 
 # Run the application
 FROM mcr.microsoft.com/dotnet/runtime:6.0
