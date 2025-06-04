@@ -7,21 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="appsettings.Development.json" />
+    <None Remove="appsettings.*.json" />
     <None Remove="appsettings.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="appsettings.Development.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="appsettings.*.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BeatTogether.MasterServer.Kernel\BeatTogether.MasterServer.Kernel.csproj" />
+    <ProjectReference Include="..\BeatTogether.MasterServer.Api\BeatTogether.MasterServer.Api.csproj" />
+    <ProjectReference Include="..\BeatTogether.MasterServer.NodeController\BeatTogether.MasterServer.NodeController.csproj" />
   </ItemGroup>
 
   <ItemGroup>
